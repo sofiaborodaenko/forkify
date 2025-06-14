@@ -3,7 +3,7 @@
 class SearchView {
   _parentElement = document.querySelector(".search");
 
-  // Returns the search value that user inputed
+  // Returns the search value that user inputed2
   getQuery() {
     const query = this._parentElement.querySelector(".search__field").value;
     this._clearInput();
