@@ -18,6 +18,40 @@ export default class View {
     this._parentElement.insertAdjacentHTML("afterbegin", markup); // displays html
   }
 
+  // Updates the markup without rendering it to the UI
+  update(data) {
+    this._data = data;
+
+    // gets the html to edit it
+    const newMarkup = this._generateMarkup();
+
+    // creates a dom from the new markup
+    const newDOM = document.createRange().createContextualFragment(newMarkup);
+    const newElements = Array.from(newDOM.querySelectorAll("*")); // gets all the dom elements
+    const currElements = Array.from(this._parentElement.querySelectorAll("*"));
+
+    // compares the dom elements and switches if needed
+    newElements.forEach((newEl, i) => {
+      const curEl = currElements[i];
+      console.log(newEl.isEqualNode(curEl));
+
+      // updates changed text
+      if (
+        !newEl.isEqualNode(curEl) &&
+        newEl.firstChild?.nodeValue.trim() !== ""
+      ) {
+        curEl.textContent = newEl.textContent;
+      }
+
+      // updates changed attributes
+      if (!newEl.isEqualNode(curEl)) {
+        Array.from(newEl.attributes).forEach((attr) => {
+          curEl.setAttribute(attr.name, attr.value);
+        });
+      }
+    });
+  }
+
   // Clears the html container
   _clear() {
     this._parentElement.innerHTML = "";
