@@ -52,10 +52,6 @@ const controlSearchResults = async function () {
 
     // render initial pagination buttons
     paginationView.render(model.state.search);
-    resultsView.render(model.getSearchResultsPage());
-
-    // render initial pagination buttons
-    paginationView.render(model.state.search);
   } catch (err) {
     console.log(err);
   }
@@ -81,7 +77,6 @@ const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
   searchView.addHandlerSearch(controlSearchResults);
-  paginationView.addHandlerClick(controlPagination);
   paginationView.addHandlerClick(controlPagination);
 };
 init();
