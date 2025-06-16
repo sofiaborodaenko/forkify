@@ -2,9 +2,10 @@
   "name": "forkify",
   "version": "1.0.0",
   "description": "Recipe application",
+  "default": "index.html",
   "scripts": {
     "start": "parcel starter/index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build starter/index.html --dist-dir ./dist"
   },
   "author": "Sofia Borodaenko",
   "license": "ISC",
