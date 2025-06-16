@@ -33,7 +33,6 @@ export default class View {
     // compares the dom elements and switches if needed
     newElements.forEach((newEl, i) => {
       const curEl = currElements[i];
-      console.log(newEl.isEqualNode(curEl));
 
       // updates changed text
       if (
