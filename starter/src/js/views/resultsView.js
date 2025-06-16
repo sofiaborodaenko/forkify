@@ -31,7 +31,7 @@ class ResultsView extends View {
                 result.key ? "" : "hidden"
               }">
                 <svg>
-                    <use href="${icons}.svg#icon-user"></use>
+                    <use href="${icons}#icon-user"></use>
                 </svg>
               </div>
             </div>
