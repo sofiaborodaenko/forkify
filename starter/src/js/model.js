@@ -34,7 +34,6 @@ export const loadRecipe = async function (id) {
       state.recipe.bookmarked = true;
     else state.recipe.bookmarked = false;
 
-    console.log(state.recipe);
   } catch (err) {
     console.log(`${err} 💥💥💥`);
     throw err;
@@ -47,7 +46,6 @@ export const loadSearchResults = async function (query) {
     state.search.query = query;
 
     const data = await getJSON(`${API_URL}?search=${query}`);
-    console.log(data);
 
     // gets the array of all the results
     state.search.results = data.data.recipes.map((rec) => {
@@ -122,4 +120,4 @@ init();
 const clearBookmarks = function () {
   localStorage.clear("bookmarks");
 };
-clearBookmarks();
+// clearBookmarks();
