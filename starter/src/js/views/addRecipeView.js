@@ -1,4 +1,4 @@
-// This file is in charge of rendering the main recipe UI
+// This file is in charge of rendering the bookmarks UI
 
 import View from "./View.js";
 import icons from "url:../../img/icons.svg";
