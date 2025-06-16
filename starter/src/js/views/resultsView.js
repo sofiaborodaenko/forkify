@@ -3,6 +3,10 @@
 import View from "./View.js";
 import icons from "url:../../img/icons.svg";
 
+// Force Parcel to treat it as a used asset
+const _forceInclude = new Image();
+_forceInclude.src = icons;
+
 class ResultsView extends View {
   _parentElement = document.querySelector(".results");
   _errorMessage = "No recipes found for your query. Please try again.";
