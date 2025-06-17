@@ -4,8 +4,8 @@
   "description": "Recipe application",
   "default": "index.html",
   "scripts": {
-    "start": "parcel starter/index.html",
-    "build": "parcel build starter/index.html --dist-dir ./dist"
+    "start": "parcel docs/index.html",
+    "build": "parcel build docs/index.html --dist-dir ./dist"
   },
   "author": "Sofia Borodaenko",
   "license": "ISC",
