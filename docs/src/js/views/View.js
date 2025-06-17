@@ -2,10 +2,6 @@
 
 import icons from "url:../../img/icons.svg";
 
-// Force Parcel to treat it as a used asset
-const _forceInclude = new Image();
-_forceInclude.src = icons;
-
 export default class View {
   _data;
 

@@ -2,9 +2,6 @@
 
 import View from "./View.js";
 import icons from "url:../../img/icons.svg";
-// Force Parcel to treat it as a used asset
-const _forceInclude = new Image();
-_forceInclude.src = icons;
 
 class PaginationView extends View {
   _parentElement = document.querySelector(".pagination");

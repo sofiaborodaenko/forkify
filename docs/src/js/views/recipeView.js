@@ -5,10 +5,6 @@ import icons from "url:../../img/icons.svg";
 // import Fraction from "fractional";
 // console.log(Fraction); not working for whatever reason
 
-// Force Parcel to treat it as a used asset
-const _forceInclude = new Image();
-_forceInclude.src = icons;
-
 class RecipeView extends View {
   _parentElement = document.querySelector(".recipe");
   _errorMessage = "We could not find the recipe. Please try another one!";
