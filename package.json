@@ -5,7 +5,7 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel docs/index.html",
-    "build": "parcel build docs/index.html --dist-dir ./dist"
+    "build": "parcel build docs/index.html --dist-dir ./dist --no-optimize"
   },
   "author": "Sofia Borodaenko",
   "license": "ISC",
