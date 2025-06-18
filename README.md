@@ -3,6 +3,7 @@
 A recipe search and bookmarking application built using modern JavaScript and the Forkify API. Users can search for recipes, view detailed cooking instructions, adjust serving sizes, upload their own recipes, and bookmark favorites — all with a seamless and responsive user interface.
 
 ## 🌐 Live Demo
+[Click here to view the live site](https://forkify-sofia.netlify.app/)
 
 
 ## 🛠️ Technologies Used
